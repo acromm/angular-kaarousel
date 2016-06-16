@@ -37,7 +37,7 @@
                 expand: '=?',
                 alwaysFill: '=?'
             },
-            templateUrl: 'app/components/kaarousel/templates/angular-kaarousel.html',
+            templateUrl: 'views/angular-kaarousel.html',
             transclude: true,
             controller: KaarouselController,
             controllerAs: 'kc'
@@ -962,4 +962,4 @@
 
 })();
 
-angular.module("angular-kaarousel").run(["$templateCache", function($templateCache) {$templateCache.put("app/components/kaarousel/templates/angular-kaarousel.html","<kaarousel-wrapper><kaarousel-slider-container><kaarousel-slider ng-transclude=\"\" class=\"kaarousel-slider\"></kaarousel-slider></kaarousel-slider-container><kaarousel-nav ng-class=\"{\'is-hidden\': !kc.navigation.visible}\"><kaarousel-prev ng-click=\"kc.move(null, true)\" ng-class=\"{\'is-hidden\': !kc.navigation.prev.visible}\">PREV</kaarousel-prev><kaarousel-next ng-click=\"kc.move(true, true)\" ng-class=\"{\'is-hidden\': !kc.navigation.next.visible}\">NEXT</kaarousel-next></kaarousel-nav><kaarousel-pager ng-class=\"{\'is-hidden\': !kc.pager.visible}\"><ul><li ng-repeat=\"i in kc.getPages() track by $index\" ng-click=\"kc.movePage($index)\" ng-class=\"{selected: $index === kc.currentPage}\">{{$index}}</li></ul></kaarousel-pager></kaarousel-wrapper>");}]);
+angular.module("angular-kaarousel").run(["$templateCache", function($templateCache) {$templateCache.put("views/angular-kaarousel.html","<kaarousel-wrapper><kaarousel-slider-container><kaarousel-slider ng-transclude=\"\" class=\"kaarousel-slider\"></kaarousel-slider></kaarousel-slider-container><kaarousel-nav ng-class=\"{\'is-hidden\': !kc.navigation.visible}\"><kaarousel-prev ng-click=\"kc.move(null, true)\" ng-class=\"{\'is-hidden\': !kc.navigation.prev.visible}\">PREV</kaarousel-prev><kaarousel-next ng-click=\"kc.move(true, true)\" ng-class=\"{\'is-hidden\': !kc.navigation.next.visible}\">NEXT</kaarousel-next></kaarousel-nav><kaarousel-pager ng-class=\"{\'is-hidden\': !kc.pager.visible}\"><ul><li ng-repeat=\"i in kc.getPages() track by $index\" ng-click=\"kc.movePage($index)\" ng-class=\"{selected: $index === kc.currentPage}\">{{$index}}</li></ul></kaarousel-pager></kaarousel-wrapper>");}]);
