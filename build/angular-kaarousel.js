@@ -700,12 +700,12 @@
          */
         function move(forward, userMove, replace) {
 
-            if (vm.options.beforeSlide) {
-                vm.options.beforeSlide()();
-            }
-
             vm.currentIndex = replace ? getRef() : getIndex(forward);
             vm.currentPage = Math.floor(getRef() / vm.options.perSlide);
+            
+            if (vm.options.beforeSlide) {
+                vm.options.beforeSlide()(vm.currentIndex);
+            }
 
             setActive();
             setVisible();
@@ -726,7 +726,7 @@
 
             if (vm.options.afterSlide) {
                 $timeout(function() {
-                    vm.options.afterSlide()();
+                    vm.options.afterSlide()(vm.currentIndex);
                 }, vm.options.transitionDuration);
             }
         }
